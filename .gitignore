@@ -1,0 +1,8 @@
+target/
+*.war
+*.class
+.vscode/
+.env
+.env.*
+secrets/
+*.secret

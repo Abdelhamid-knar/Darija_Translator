@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Darija Translator</title>
+    <style>
+      body {
+        font-family: system-ui, Arial, sans-serif;
+        margin: 12px;
+      }
+      label {
+        display: block;
+        font-size: 12px;
+        margin-top: 8px;
+        margin-bottom: 4px;
+      }
+      input, button, textarea {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 8px;
+        margin-bottom: 8px;
+      }
+      textarea {
+        height: 80px;
+        resize: vertical;
+      }
+      .row {
+        display: flex;
+        gap: 8px;
+      }
+      .row > div {
+        flex: 1;
+      }
+      .status {
+        font-size: 12px;
+        color: #444;
+        margin-bottom: 8px;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .translation {
+        font-size: 16px;
+        margin-top: 8px;
+        padding: 10px;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        min-height: 46px;
+        white-space: pre-wrap;
+        word-break: break-word;
+      }
+      .actions {
+        display: flex;
+        gap: 8px;
+      }
+      .actions button {
+        margin-bottom: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h3>Darija Translator</h3>
+
+    <div class="status" id="status">Waiting for selection...</div>
+
+    <label for="textInput">Selected text</label>
+    <textarea id="textInput" placeholder="Right-click a webpage selection → Translate to Darija"></textarea>
+
+    <div class="row">
+      <div>
+        <label for="username">Basic username</label>
+        <input id="username" type="text" autocomplete="username" />
+      </div>
+      <div>
+        <label for="password">Basic password</label>
+        <input id="password" type="password" autocomplete="current-password" />
+      </div>
+    </div>
+
+    <label for="baseUrl">REST endpoint</label>
+    <input id="baseUrl" type="text" />
+
+    <div class="actions">
+      <button id="translateBtn" type="button">Translate</button>
+      <button id="copyBtn" type="button" disabled>Copy translation</button>
+    </div>
+
+    <div class="translation" id="translationBox"></div>
+
+    <script src="sidepanel.js"></script>
+  </body>
+</html>
+

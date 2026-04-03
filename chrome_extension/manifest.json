@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Darija Translator (LLM)",
+  "version": "1.0.0",
+  "description": "Translate selected text to Moroccan Arabic Dialect (Darija) using a REST API.",
+  "permissions": ["contextMenus", "storage", "sidePanel", "tabs"],
+  "host_permissions": [
+    "http://localhost:8080/*",
+    "http://127.0.0.1:8080/*"
+  ],
+  "background": {
+    "service_worker": "service_worker.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  }
+}
+
