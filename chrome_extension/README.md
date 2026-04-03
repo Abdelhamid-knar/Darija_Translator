@@ -23,3 +23,5 @@ In the side panel UI:
 
 The extension stores these values locally.
 
+Use dedicated local credentials for development. Do not publish real usernames or passwords in the repository.
+

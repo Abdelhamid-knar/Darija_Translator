@@ -14,14 +14,13 @@ python python_client/translator_client.py --text "Hello world"
 
 ### Configure Basic Auth
 
-The script reads credentials from environment variables (recommended) or defaults to:
-`admin / admin`
+The script reads credentials from environment variables (recommended). If you do not set them, the script uses local demo defaults, so set your own values before sharing or deploying.
 
 Set:
 
-```bash
-set BASIC_AUTH_USERNAME=admin
-set BASIC_AUTH_PASSWORD=admin
+```powershell
+$env:BASIC_AUTH_USERNAME="your-username"
+$env:BASIC_AUTH_PASSWORD="your-password"
 ```
 
 ### Custom URL / text
